@@ -26,7 +26,7 @@ app.get("/notes", (req, res) => res.sendFile(path.join(__dirname, "/public/notes
 
 // Function shows existing notes if there are any
 app.get("/api/notes", (req, res) => {
-    fs.readFile("db/db.json", (error, data) => {
+    fs.readFile("./db/db.json", (error, data) => {
         if (error) {
             console.error(error)
         } else {
