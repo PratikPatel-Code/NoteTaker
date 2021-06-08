@@ -1,5 +1,4 @@
 // Const setup
-
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
@@ -37,7 +36,7 @@ app.get("/api/notes", (req, res) => {
 
 // Function allows posting of new notes
 app.post("/api/notes", (req, res) => {
-    fs.readFile("db/db.json", (error, data) => {
+    fs.readFile("./db/db.json", (error, data) => {
         if (error) {
             console.error(error)
         } else {
