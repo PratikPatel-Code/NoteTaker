@@ -1,7 +1,6 @@
 // Const setup
 
 const express = require("express");
-const e = require("express");
 const path = require("path");
 const fs = require("fs");
 const uniqid = require('uniqid');
