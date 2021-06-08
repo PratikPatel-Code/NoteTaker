@@ -1,6 +1,7 @@
 // Const setup
 
 const express = require("express");
+const e = require("express");
 const path = require("path");
 const fs = require("fs");
 const uniqid = require('uniqid');
@@ -63,7 +64,7 @@ app.delete("/api/notes/:id", (req, res) => {
             let notes = JSON.parse(data);
             notes = notes.filter(e => e.id != req.params.id)
             fs.writeFile("db/db.json", JSON.stringify(notes), (err) =>
-                err ? console.error(err) : console.log('Note has been DELETED!'))
+                err ? console.error(err) : console.log('Note has successfully been deleted!'))
             res.send({});
         }
     })
